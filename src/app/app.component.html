@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card>
+    <mat-card-title>
+      <h1>Demo For API Patterns</h1>
+    </mat-card-title>
+  </mat-card>
+  <mat-card>
+    <mat-card-actions>
+      <button mat-button
+              [routerLink]="['sync']">Synchronous</button>
+      <button mat-button
+              [routerLink]="['async']">Asynchronous</button>
+      <button mat-button
+              [routerLink]="['websockets']">Websockets</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+
+    </mat-card-header>
+    <mat-card-content>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+  </mat-card>
+</mat-card>

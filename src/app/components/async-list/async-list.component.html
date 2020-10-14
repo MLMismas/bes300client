@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card *ngFor="let order of orders">
+    <mat-card-content>
+      <p>Order For {{ order.for }} </p>
+      <p>Items: {{order.items }}</p>
+      <p>Status: {{ order.status }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-button
+              (click)="refresh(order)">Refresh</button>
+    </mat-card-footer>
+  </mat-card>
+</mat-card>

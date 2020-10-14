@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title>Placing Orders Asynchronously</mat-card-title>
+    <mat-card-subtitle>The more items, the slower it is.</mat-card-subtitle>
+  </mat-card-title-group>
+  <mat-card-content>
+    <app-order-entry (orderPlaced)="onOrderPlaced($event)"></app-order-entry>
+    <app-async-list [orders]="orders$ | async"></app-async-list>
+
+  </mat-card-content>
+</mat-card>

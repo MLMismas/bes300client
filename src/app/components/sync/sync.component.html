@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title>Placing Orders Synchronously</mat-card-title>
+    <mat-card-subtitle>The more items, the slower it is.</mat-card-subtitle>
+  </mat-card-title-group>
+  <mat-card-content>
+    <app-order-entry (orderPlaced)="onOrderPlaced($event)"></app-order-entry>
+    <div *ngIf="order !== null">
+      <h4>Placed Your Order</h4>
+      <p>Id: {{ order.id}}</p>
+      <p>For: {{ order.for }}</p>
+      <p>Items: {{ order.items }}</p>
+      <p>Status: {{ order.status }}</p>
+
+    </div>
+
+  </mat-card-content>
+</mat-card>

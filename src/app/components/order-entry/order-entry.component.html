@@ -1,0 +1,23 @@
+<form (ngSubmit)="submit()"
+      [formGroup]="form">
+  <div class="field-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Who is the order for:</mat-label>
+      <input matInput
+             formControlName="for">
+    </mat-form-field>
+  </div>
+  <div class="field-container">
+    <mat-form-field appearance="fill">
+      <mat-label>What are they ordering:</mat-label>
+      <input matInput
+             placeholder="Comma Separated list (e.g. 1,2,3)"
+             formControlName="items">
+    </mat-form-field>
+  </div>
+  <div class="field-container">
+    <button mat-button
+            [disabled]="form.invalid"
+            type="submit">Place Order</button>
+  </div>
+</form>
