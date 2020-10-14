@@ -1,0 +1,10 @@
+<div *ngIf="order !== null">
+    <p>Id: {{ order.id }}</p>
+    <p>For: {{ order.for }}</p>
+    <p>Items: {{ order.items }}</p>
+    <p>Status: {{ order.status }}</p>
+    <p>Items Processed: {{ order.location }}</p>
+</div>
+<div *ngIf="order === null">
+    <h3>No order placed yet.</h3>
+</div>
